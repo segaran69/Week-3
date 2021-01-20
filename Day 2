@@ -1,0 +1,87 @@
+var myString = "Asia Developer Academy";
+console.log(myString.length);
+console.log(myString.toUpperCase());
+console.log(myString.toLowerCase());
+console.log(myString.charAt(6));
+console.log(myString.indexOf('ev'));
+console.log(myString.lastIndexOf('e'));
+console.log(myString.substring(5.14));
+console.log(myString.split(" "))
+
+function findLongestWordLength(str) {
+  var max = 0
+  var stringArray = str.split(" ");
+  for (var i=0; i<stringArray.length; i++){
+    if (stringArray[i].length > max){
+      max = stringArray[i].length;
+    }
+  }
+  return max;
+}
+
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+
+function reverseString(str) {
+  var answer = "";
+  for (var i=0; i < str.length; i++){
+    answer += str.charAt(str.length -i-1);
+  }
+  return answer;
+}
+
+console.log(reverseString("hello"));
+
+var number = 12.3456
+
+console.log(number.toPrecision(3));
+console.log(number.toFixed(3));
+
+console.log(Math.ceil(number));
+console.log(Math.floor(number));
+console.log(Math.round(number));
+console.log(Math.random());
+console.log(Math.ceil(Math.random()*100))
+
+var numbers=[2,4,6,8,10];
+numbers.push(20);
+console.log(numbers);
+numbers.pop();
+console.log(numbers);
+console.log(numbers.length);
+
+numbers.splice(1,2);
+console.log(numbers);
+console.log (3**3) // power of
+
+//can be used through the application, inside and outside function curly bracket
+var a = 10;
+var b = 5;
+function sayHello(){
+  //Local Variable - the variable that is defined whithin the curly bracket of a function for ex
+  var c = 5
+  var d = 3
+  console.log(c);
+  console.log(a);
+}
+console.log(a);
+sayHello();
+
+
+// an object is a data type to represent a real world object in programming 
+// normally it has property which is the left part: name, company, location, phonenumber
+// it also might have a method (later you will see)
+var employee1 = {
+  name: "Segaran.D",
+  company: "BAC",
+  location: "Kajang",
+  phonenumber:"0102440969"
+}
+console.log(employee1);
+console.log(employee1.name);
+console.log(employee1.company);
+
+var students = ["App","Boy","Bai","Koi","Moi","Nei","Chin","Soo","Vai"];
+for (var i=0; i<0; i++){
+  var index = Math.floor(Math.random()*students.length);
+  console.log(students[index] +" will do question number "+(i+1))
+}
